@@ -16,6 +16,8 @@
       {{takeRoleID $member.User.ID /* Replace with your Infected Role ID */}} {{/* removes infection from the target user */}}
       {{.User.Mention}} has healed {{$member.User.Mention}} from the infection!
     {{end}}
+  {{else if (targetHasRoleID $member.User.ID /* Replace with your Virus Role ID */)}} {{/* if target is a virus */}}
+    A Virus :microbe: cannot be healed.
   {{else}}
     {{$member.User.Username}} is well and healthy!
   {{end}}
